@@ -1,4 +1,3 @@
-/* prog_5.c - Commit 2 (partial) */
 #include <stdio.h>
 #include <string.h>
 
@@ -29,6 +28,6 @@ int main() {
         {0,1,0,0,1},
         {0,0,1,1,0}
     };
-    printf("BFS: "); runBFS(adj,0); printf("\nDFS: "); runDFS(adj,0); printf("\n");
+    printf("BFS starting from 0: "); runBFS(adj,0); printf("\nDFS starting from 0: "); runDFS(adj,0); printf("\n");
     return 0;
 }
