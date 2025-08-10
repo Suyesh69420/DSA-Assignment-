@@ -14,3 +14,6 @@
 - Demonstrates conversion and evaluation on `3+(2*4)-5`.
 
 ## Sample Output
+Infix: 3+(2*4)-5
+Postfix: 324*+5-
+Evaluation: 6
