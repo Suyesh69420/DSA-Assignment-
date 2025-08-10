@@ -13,5 +13,14 @@
 ## main()
 - Runs three test expressions and prints whether each is balanced.
 
-## Sample Output
+## Sample Output 
+Expression: a + (b - c) * (d
+ Not Balanced
+-----------------
+Expression: m + [a - b * (c + d * {m})]
+ Balanced
+-----------------
+Expression: a + (b - c)
+ Balanced
+-----------------
 
