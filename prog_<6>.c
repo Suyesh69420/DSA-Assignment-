@@ -1,4 +1,3 @@
-/* prog_6.c - Commit 3 (final) */
 #include <stdio.h>
 
 void heapify(int arr[], int n, int i, int isMax){
