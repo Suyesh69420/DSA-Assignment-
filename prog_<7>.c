@@ -4,9 +4,9 @@
 #define V 5
 
 int minDistance(int dist[], int sptSet[]){
-    int min=INT_MAX, min_index=-1;
-    for(int v=0; v<V; ++v) if(!sptSet[v] && dist[v]<=min){ min=dist[v]; min_index=v; }
-    return min_index;
+    int min=INT_MAX, idx=-1;
+    for(int v=0; v<V; ++v) if(!sptSet[v] && dist[v]<=min){ min=dist[v]; idx=v; }
+    return idx;
 }
 
 void shortPath(int graph[V][V], int src){
@@ -17,13 +17,13 @@ void shortPath(int graph[V][V], int src){
         int u=minDistance(dist, sptSet);
         if(u==-1) break;
         sptSet[u]=1;
-        for(int v=0; v<V; ++v)
+        for(int v=0; v<V; ++v){
             if(!sptSet[v] && graph[u][v] && dist[u]!=INT_MAX && dist[u]+graph[u][v] < dist[v])
                 dist[v]=dist[u]+graph[u][v];
+        }
     }
-    printf("Distances from %d: ", src);
-    for(int i=0;i<V;++i) printf("%d ", dist[i]==INT_MAX?-1:dist[i]);
-    printf("\n");
+    printf("Vertex\tDistance from Source %d\n", src);
+    for(int i=0;i<V;++i) printf("%d\t%d\n", i, dist[i]==INT_MAX?-1:dist[i]);
 }
 
 int main(){
