@@ -9,6 +9,7 @@ Creating the file prog_<q>.c with only the basic structure:
 #include statements
 
 main() function
+
 No real implementation  is shown in this commit , just the scaffolding,this works  as  a blueprint for the program  about to run 
 
 Purpose: Show the initial setup of the program and the functions necessary for the program
@@ -34,3 +35,6 @@ Better formatting
 Adding function decomposition (move logic into functions)
 
 Adding final input/output handling.
+
+Purpose: Fully working, polished version.
+
