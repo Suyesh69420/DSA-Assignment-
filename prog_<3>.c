@@ -13,11 +13,18 @@ void walkBack(struct Node *head) {
     printf("%d ", head->val);
 }
 
+void freeList(struct Node *head){
+    while(head){ struct Node *t=head; head=head->next; free(t); }
+}
+
 int main() {
     struct Node *h = NULL;
-    pushNode(&h, 10); pushNode(&h, 20); pushNode(&h, 30);
-    printf("Reverse traversal: ");
+    pushNode(&h, 10); pushNode(&h, 20); pushNode(&h, 30); /* list is 30->20->10 */
+    printf("List forward: ");
+    for (struct Node *p=h; p; p=p->next) printf("%d ", p->val);
+    printf("\nReverse traversal: ");
     walkBack(h);
     printf("\n");
+    freeList(h);
     return 0;
 }
