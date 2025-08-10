@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+#define MAX_SIZE 100
+
+// Stack structure
+typedef struct {
+    char arr[MAX_SIZE];
+    int top;
+} CharStack;
+
+// Function prototypes
+void initBox(CharStack *s);
+bool isBoxEmpty(CharStack *s);
+bool isBoxFull(CharStack *s);
+void pushBox(CharStack *s, char ch);
+char popBox(CharStack *s);
+bool checkPairing(const char *expr);
+
+int main() {
+    printf("Program structure ready for balanced parentheses check.\n");
+    return 0;
+}
+
+}
